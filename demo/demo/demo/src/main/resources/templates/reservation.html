@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<style>
+	div {
+		background-color: lightgrey;
+		border: 5px solid green;
+		width: 35%;
+		padding: 50px;
+		margin: 20px;
+	}
+
+	td {
+		padding: 10px;
+	}
+</style>
+<body>
+	<h1>Reservation page</h1>
+
+	<form action="#" th:action="@{/save}" th:object="${reservationObj}"
+		method="POST">
+
+		<div>
+			<table>
+				<tr>
+					<td><input type="text" th:field="*{name}"
+						placeholder="User Name" class="form-control mb-4 col-4"></td>
+
+					<td><input type="number" th:field="*{age}" placeholder="Age"
+						class="form-control mb-4 col-4"></td>
+				</tr>
+
+				<tr>
+					<td><input type="text" th:field="*{gender}"
+						placeholder="Gender" class="form-control mb-4 col-4"></td>
+
+					<td><input type="text" th:field="*{trainName}"
+						placeholder="Train Name" class="form-control mb-4 col-4">
+					</td>
+				</tr>
+
+
+				<tr>
+					<td><input type="number" th:field="*{trainNumber}"
+						placeholder="Train Number" class="form-control mb-4 col-4">
+					</td>
+					<td><input type="text" th:field="*{classType}"
+						placeholder="Class Type" class="form-control mb-4 col-4">
+					</td>
+				</tr>
+
+
+				<tr>
+					<td><input type="text" th:field="*{journeyFrom}"
+						placeholder="Journey From" class="form-control mb-4 col-4">
+					</td>
+					
+					<td><input type="text" th:field="*{destination}"
+						placeholder="Destination" class="form-control mb-4 col-4">
+					</td>
+				</tr>
+
+
+				<tr>
+					<td><button type="submit" name="action" value="savedata" class="btn btn-primary">save</button></td>
+					<td><button type="submit" name="action" value="cancelform" class="btn btn-outline-secondary">cancel</button></td>
+					<td><button type="submit" name="action" value="cancelpage" class="btn btn-danger">Cancel Ticket</button></td>
+					
+				</tr>
+
+			</table>
+
+
+		</div>
+	</form>
+</body>
+</html>

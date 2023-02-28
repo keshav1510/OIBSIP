@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+	div {
+	  background-color: lightgrey;
+	  width: 300px;
+	  border: 15px solid green;
+	  padding: 50px;
+	  margin: 120px;
+	  margin-left: 33%;
+	}
+</style>
+</head>
+<body>
+ 	<form action="#" th:action="@{/popup}" th:object="${reservationObj}"
+            method="POST">
+        <div>
+		<h1>Record saved successfully</h1>
+        <p>The PNR is </p>
+        <p th:text="${pnr}"></p>
+		<button type="submit">OK</button>
+		</div>
+     </form>
+</body>
+</html>

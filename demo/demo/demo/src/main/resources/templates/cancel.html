@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>Cancel page</p>
+	 <form action="#" th:action="@{/delete}" th:object="${pnrCancel}"
+		method="POST">
+		<label for="pnr">Enter PNR number</label>
+<!--		 <input type="text" th:field="*{gender}"-->
+<!--				placeholder="Gender" class="form-control mb-4 col-4">-->
+		<input id="pnr" type="number" th:field="*{pnr}" placeholder="PNR" class="form-control">
+		<button type="submit" name="action" value="cancelpnr" class="btn btn-primary">Cancel</button>
+	</form>
+</body>
+</html>
